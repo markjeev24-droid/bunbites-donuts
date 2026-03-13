@@ -1,15 +1,39 @@
 body{
-font-family: Arial;
+font-family:Arial;
+margin:0;
 background:#fff5f5;
 text-align:center;
 }
 
 header{
-background:#ff7b7b;
-padding:20px;
+background:#ff6b6b;
 color:white;
+padding:20px;
 display:flex;
 justify-content:space-between;
+align-items:center;
+}
+
+header a{
+color:white;
+text-decoration:none;
+font-size:20px;
+}
+
+.hero{
+background:#ff8787;
+color:white;
+padding:80px 20px;
+}
+
+.hero button{
+background:white;
+color:#ff6b6b;
+border:none;
+padding:12px 25px;
+font-size:18px;
+cursor:pointer;
+border-radius:6px;
 }
 
 .menu{
@@ -23,8 +47,7 @@ padding:40px;
 background:white;
 padding:20px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-width:200px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
 .item img{
@@ -39,13 +62,20 @@ border:none;
 padding:10px;
 margin-top:10px;
 cursor:pointer;
-
+border-radius:5px;
 }
 
-.hero{
-background:#ff7b7b;
-color:white;
-padding:80px;
+input{
+padding:8px;
+margin-top:8px;
+width:60px;
 text-align:center;
 }
 
+.order{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
