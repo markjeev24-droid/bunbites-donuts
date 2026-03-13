@@ -13,10 +13,10 @@ justify-content:space-between;
 }
 
 .menu{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:40px;
 }
 
 .item{
@@ -48,3 +48,4 @@ color:white;
 padding:80px;
 text-align:center;
 }
+
