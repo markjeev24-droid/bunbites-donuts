@@ -12,35 +12,50 @@
 <a href="cart.html">🛒 Cart</a>
 </header>
 
-<h2>Our Menu</h2>
-
-<div class="menu">
-
 <section class="hero">
-<h1>Bunny Bites Mini Donuts 🍩</h1>
-<p>Fresh, Sweet, and Made to Order</p>
+<h2>Fresh Mini Donuts</h2>
+<p>Sweet • Fresh • Made to Order</p>
 <a href="#menu"><button>Order Now</button></a>
 </section>
 
+<h2 id="menu">Our Menu</h2>
+
+<div class="menu">
+
 <div class="item">
-<img src="https://i.imgur.com/8Km9tLL.jpg">
+<img src="images/chocolate.jpg">
 <h3>Chocolate Donuts</h3>
-<p>₱120 - 12pcs</p>
-<button onclick="addToCart('Chocolate Donuts',120)">Add to Cart</button>
+<p>₱120</p>
+
+<input type="number" id="qty1" value="1" min="1">
+
+<button onclick="addToCart('Chocolate Donuts',120,qty1.value)">
+Add to Cart
+</button>
 </div>
 
 <div class="item">
-<img src="https://i.imgur.com/0umadnY.jpg">
+<img src="images/oreo.jpg">
 <h3>Oreo Donuts</h3>
-<p>₱150 - 12pcs</p>
-<button onclick="addToCart('Oreo Donuts',150)">Add to Cart</button>
+<p>₱150</p>
+
+<input type="number" id="qty2" value="1" min="1">
+
+<button onclick="addToCart('Oreo Donuts',150,qty2.value)">
+Add to Cart
+</button>
 </div>
 
 <div class="item">
-<img src="https://i.imgur.com/Z7AzH2c.jpg">
+<img src="images/strawberry.jpg">
 <h3>Strawberry Donuts</h3>
-<p>₱140 - 12pcs</p>
-<button onclick="addToCart('Strawberry Donuts',140)">Add to Cart</button>
+<p>₱140</p>
+
+<input type="number" id="qty3" value="1" min="1">
+
+<button onclick="addToCart('Strawberry Donuts',140,qty3.value)">
+Add to Cart
+</button>
 </div>
 
 </div>
@@ -48,5 +63,4 @@
 <script src="script.js"></script>
 
 </body>
-
 </html>
