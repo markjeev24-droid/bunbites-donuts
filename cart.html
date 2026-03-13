@@ -11,6 +11,12 @@
 
 <div id="cartItems"></div>
 
+<h2>Customer Information</h2>
+
+<input type="text" id="name" placeholder="Your Name"><br>
+<input type="text" id="phone" placeholder="Phone Number"><br>
+<input type="text" id="address" placeholder="Delivery Address"><br>
+
 <button onclick="checkout()">Place Order</button>
 
 <script>
@@ -19,16 +25,31 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let container = document.getElementById("cartItems");
 
 cart.forEach(item=>{
-container.innerHTML += `<p>${item.name} - ₱${item.price}</p>`;
+container.innerHTML += `<p>${item.name} x${item.qty} - ₱${item.price * item.qty}</p>`;
 });
 
 function checkout(){
 
-localStorage.setItem("orders",JSON.stringify(cart));
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
 
-alert("Order Sent!");
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+orders.push({
+customer:name,
+phone:phone,
+address:address,
+items:cart
+});
+
+localStorage.setItem("orders",JSON.stringify(orders));
 
 localStorage.removeItem("cart");
+
+alert("Order placed!");
+
+location.reload();
 
 }
 
