@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Orders</title>
+</head>
+
+<body>
+
+<h1>Customer Orders</h1>
+
+<div id="orders"></div>
+
+<script>
+
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+let div = document.getElementById("orders");
+
+orders.forEach(order=>{
+div.innerHTML += `<p>${order.name} - ₱${order.price}</p>`;
+});
+
+</script>
+
+</body>
+</html>
