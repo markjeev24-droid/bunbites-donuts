@@ -1,15 +1,19 @@
-function addToCart(name,price,qty){
+function filterCategory(category){
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let items = document.querySelectorAll(".item");
 
-cart.push({
-name:name,
-price:price,
-qty:qty
+items.forEach(item => {
+
+if(category === "all"){
+item.style.display = "block";
+}
+else if(item.classList.contains(category)){
+item.style.display = "block";
+}
+else{
+item.style.display = "none";
+}
+
 });
-
-localStorage.setItem("cart",JSON.stringify(cart));
-
-alert("Added to cart!");
 
 }
