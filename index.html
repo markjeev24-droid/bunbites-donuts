@@ -1,111 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>BunBites</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-
-<nav class="navbar">
-
-<div class="logo">
-🍩 BunBites
-</div>
-
-<ul class="nav-links">
-
-<li><a href="#">Home</a></li>
-<li><a href="#menu">Menu</a></li>
-<li><a href="cart.html">Order Now</a></li>
-<li><a href="signup.html">Sign Up</a></li>
-<li><a href="signin.html">Sign In</a></li>
-
-</ul>
-
-<a class="cart-btn" href="cart.html">🛒 Cart</a>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<h1>Fresh Mini Donuts Daily 🍩</h1>
-
-<p>Sweet • Fresh • Made to Order</p>
-
-<a href="#menu">
-<button class="hero-btn">Order Now</button>
-</a>
-
-</section>
-
-
-<!-- MENU SECTION -->
-
 <section id="menu">
 
 <h2>Our Menu</h2>
 
+<!-- CATEGORY BUTTONS -->
+
+<div class="categories">
+
+<button onclick="filterCategory('all')">All</button>
+<button onclick="filterCategory('classic')">Classic</button>
+<button onclick="filterCategory('messy')">Messy</button>
+<button onclick="filterCategory('custom')">Custom</button>
+
+</div>
+
 <div class="menu">
 
-<div class="item">
+<!-- CLASSIC -->
 
-<img src="Images/6PCS.jpg">
-
-<h3>6pcs. Package</h3>
-
+<div class="item classic">
+<img src="images/chocolate.jpg">
+<h3>Chocolate Donuts</h3>
+<p>₱120</p>
 <input type="number" id="qty1" value="1" min="1">
-
 <button onclick="addToCart('Chocolate Donuts',120,qty1.value)">
 Add to Cart
 </button>
-
 </div>
 
+<!-- MESSY -->
 
-<div class="item">
-
-<img src="Images/12PCS.jpg">
-
-<h3>12pcs. Package</h3>
-
+<div class="item messy">
+<img src="images/oreo.jpg">
+<h3>Oreo Messy Donuts</h3>
+<p>₱150</p>
 <input type="number" id="qty2" value="1" min="1">
-
-<button onclick="addToCart('Oreo Donuts',150,qty2.value)">
+<button onclick="addToCart('Oreo Messy Donuts',150,qty2.value)">
 Add to Cart
 </button>
-
 </div>
 
+<!-- CUSTOM -->
 
-<div class="item">
-
-<img src="images/25PCS.jpg">
-
-<h3>25pcs. Package</h3>
-
+<div class="item custom">
+<img src="images/strawberry.jpg">
+<h3>Custom Donuts</h3>
+<p>₱180</p>
 <input type="number" id="qty3" value="1" min="1">
-
-<button onclick="addToCart('Strawberry Donuts',140,qty3.value)">
+<button onclick="addToCart('Custom Donuts',180,qty3.value)">
 Add to Cart
 </button>
-
 </div>
 
 </div>
 
 </section>
-
-
-<script src="script.js"></script>
-
-</body>
-</html>
-
-
-
-
